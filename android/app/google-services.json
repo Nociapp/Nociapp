@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "732901326",
+    "firebase_url": "https://nociapp.firebaseio.com",
+    "project_id": "nociapp",
+    "storage_bucket": "nociapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732901326:android:671e45608bc3e151d4c59f",
+        "android_client_info": {
+          "package_name": "com.github.nocia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732901326-mlns9joevt21h13qi9p1n2a9ffs5qv82.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.github.nocia",
+            "certificate_hash": "b62ed5fdff947a7ff3fe02f5315da4f61e75e5ed"
+          }
+        },
+        {
+          "client_id": "732901326-gaun4tdcq0bdab3un63rjnf3fsj7opor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs0nGAla9LOdvI2LAW6g-woR9m7tFnzS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732901326-gaun4tdcq0bdab3un63rjnf3fsj7opor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
