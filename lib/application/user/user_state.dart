@@ -1,0 +1,23 @@
+import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
+import 'package:nociapp/domain/user.dart';
+
+abstract class UserState extends Equatable {
+  UserState([List props = const []]) : super();
+
+  @override
+  List<Object> get props => [];
+}
+
+
+class Initial extends UserState {}
+
+class Loading extends UserState {}
+
+class Completed extends UserState {}
+
+class UserStream extends UserState {
+  final Stream<User> userStream;
+
+  UserStream({@required this.userStream}): assert(userStream != null);
+}
