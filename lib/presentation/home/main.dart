@@ -24,16 +24,13 @@ class _Home extends State<Home> {
             userBloc.add(Request());
             print("User requested.");
           }
-          if (state is Loading) {
-            print("User loading.");
-          }
-          if (state is Completed) {
-            print("User loading completed.");
-          }
           // Return main page after User loading completed.
           if (state is UserStream) {
+            print("User loading completed.");
             return Scaffold(
-              body: Container()
+              body: Container(
+                color: Colors.red,
+              )
             );
           }
           return Container();
