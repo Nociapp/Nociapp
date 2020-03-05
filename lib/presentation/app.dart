@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nociapp/application/user/user_bloc.dart';
+import 'package:nociapp/infrastructure/repository/impl_user_repository.dart';
 import 'package:nociapp/presentation/home/main.dart';
 import 'package:nociapp/presentation/theme.dart' as nocia;
 
@@ -10,7 +13,10 @@ class App extends StatelessWidget {
     return nocia.NociaTheme(
       title: "Test",
       theme: nocia.Theme.Light,
-      home: Home()
+      home: BlocProvider(
+        create: (BuildContext context) => UserBloc(userRepository: UserRepository()),
+        child: Home()
+      )
     );
   }
 }
