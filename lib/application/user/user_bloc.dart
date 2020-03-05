@@ -2,7 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:nociapp/application/user/user_event.dart';
 import 'package:nociapp/application/user/user_state.dart';
-import 'package:nociapp/infrastructure/repository/user_repository.dart';
+import 'package:nociapp/domain/user.dart';
+import 'package:nociapp/infrastructure/repository/impl_user_repository.dart';
 
 class UserBloc extends Bloc<UserEvent, UserState> {
   final UserRepository userRepository;
@@ -17,10 +18,10 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     if (event is Request) {
       yield Loading();
 
-      userRepository.fetchUser();
+      final User user = await userRepository.user();
       yield Completed();
 
-      yield UserStream(userStream: userRepository.user);
+      yield UserStream(user: user);
     }
   }
 }

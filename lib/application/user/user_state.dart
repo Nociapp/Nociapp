@@ -9,7 +9,6 @@ abstract class UserState extends Equatable {
   List<Object> get props => [];
 }
 
-
 class Initial extends UserState {}
 
 class Loading extends UserState {}
@@ -17,7 +16,7 @@ class Loading extends UserState {}
 class Completed extends UserState {}
 
 class UserStream extends UserState {
-  final Stream<User> userStream;
+  final User user;
 
-  UserStream({@required this.userStream}): assert(userStream != null);
+  UserStream({@required this.user}): assert(user != null);
 }
