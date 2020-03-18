@@ -28,5 +28,14 @@ class NociaTheme extends StatelessWidget {
 
   get lightTheme => ThemeData();
 
-  get darkTheme => ThemeData();
+  get darkTheme => ThemeData(
+    bottomAppBarTheme: BottomAppBarTheme(color: darkColor),
+    appBarTheme: AppBarTheme(color: darkColor),
+    backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+    scaffoldBackgroundColor: darkColor
+  );
+
+  static get lightColor => Colors.white;
+
+  static get darkColor => Color.fromRGBO(58, 66, 86, 1.0);
 }
